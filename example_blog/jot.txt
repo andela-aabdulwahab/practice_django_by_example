@@ -1,0 +1,6 @@
+The DateTimeField of Models has the auto_now_add and auto_now. The former save
+the date the object is add as default. While the latter save the "now" date
+every time the object is updated.
+
+created = models.DateTimeField(auto_now_add=True)
+updated = models.DateTimeField(auto_now=True)
