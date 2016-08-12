@@ -1,1 +1,4 @@
 /venv
+*.pyc
+
+/blog/__pycache__/*

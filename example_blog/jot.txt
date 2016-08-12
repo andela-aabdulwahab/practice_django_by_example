@@ -2,5 +2,13 @@ The DateTimeField of Models has the auto_now_add and auto_now. The former save
 the date the object is add as default. While the latter save the "now" date
 every time the object is updated.
 
-created = models.DateTimeField(auto_now_add=True)
-updated = models.DateTimeField(auto_now=True)
+    created = models.DateTimeField(auto_now_add=True)
+    updated = models.DateTimeField(auto_now=True)
+
+
+When defining a custom manager, "objects" has to be re-initiated with the default
+models.Manager(), if not define django uses the custom manager as the default Manager
+for the Model.
+
+    objects = models.Manager()
+    custom = CustomManager()
